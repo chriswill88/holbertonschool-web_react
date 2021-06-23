@@ -19,7 +19,7 @@ const student2: Student = {
     location: 'Netherlands',
 }
 
-const studentList = [student1, student2]
+const studentList: Student[] = [student1, student2]
 for (let i of studentList) {
     console.log(i);
 }
