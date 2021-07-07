@@ -43,4 +43,9 @@ module.exports = {
       new CleanWebpackPlugin(),
     ],
     devtool: "inline-source-map",
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+      },
+    },
   };
