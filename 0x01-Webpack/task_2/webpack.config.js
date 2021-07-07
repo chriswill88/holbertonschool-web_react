@@ -14,8 +14,8 @@ module.exports = {
           use: ["style-loader", "css-loader"],
         },
         {
-          test: /\.(png|jpg)$/,
-          loader: 'url-loader',
+          test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+          type: 'file-loader',
           options: {
             // Images larger than 10 KB won’t be inlined
             limit: 10 * 1024
