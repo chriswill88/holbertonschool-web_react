@@ -12,5 +12,5 @@ function updateCounter() {
 }
 
 $('#count').text(`${count} clicks on the button`);
-const fun = $.debounce(updateCounter, 100);
+const fun = _.debounce(updateCounter, 500);
 $(':button').on('click', fun);
