@@ -11,10 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.6.0",
-    "lodash": "^4.17.21",
-    "webpack": "^5.42.0"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "webpack": "^5.42.0",
     "webpack-cli": "^4.7.2"
   }
 }
