@@ -13,17 +13,17 @@ export const cTeacher: Subjects.Teacher = {
 console.log('C++');
 const c = new cpp();
 c.teacherSet = cTeacher;
-c.getAvailableTeacher()
+console.log(c.getAvailableTeacher());
 c.getRequirements()
 
 console.log('Java');
 const j = new java();
 j.teacherSet = cTeacher;
-j.getAvailableTeacher()
+console.log(j.getAvailableTeacher());
 j.getRequirements()
 
 console.log('React');
 const r = new react();
 r.teacherSet = cTeacher;
-r.getAvailableTeacher()
+console.log(r.getAvailableTeacher());
 r.getRequirements()
