@@ -1,17 +1,17 @@
-interface Teacher {
-    firstName: String;
-    lastName: String;
+export interface Teacher {
+    readonly firstName: String;
+    readonly lastName: String;
     fullTimeEmployee: Boolean;
     yearsOfExperience?: Number;
     location: String;
     [key: string]: any;
 }
 
-interface Directors extends Teacher {
+export interface Directors extends Teacher {
     numberOfReports: Number;
 }
 
-interface printTeacherFunction {
+export interface printTeacherFunction {
     (firstName: String, lastName: String): String;
 };
 
@@ -19,12 +19,12 @@ const printTeacher: printTeacherFunction = function (firstName: String, lastName
     return `${firstName[0]}. ${lastName}`;
 }
 
-interface Student {
+export interface Student {
     firstName: String;
     lastName: String;
 }
 
-class StudentClass {
+export class StudentClass {
     firstName: String;
     lastName: String;
 
