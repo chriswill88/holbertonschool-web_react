@@ -2,7 +2,7 @@ import React from 'react';
 import {expect, jest, test} from '@jest/globals';
 import { shallow, configure} from 'enzyme';
 import App from './App'
-import Notifications from './Notifications'
+import Notifications from '../Notifications/Notifications'
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 configure({ adapter: new Adapter() });
