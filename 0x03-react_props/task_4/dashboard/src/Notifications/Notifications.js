@@ -2,9 +2,10 @@ import React from 'react';
 import NotificationItem from './NotificationItem';
 
 import { getLatestNotification } from '../utils/utils'
+import propTypes from 'prop-types';
 
 
-export default function Notifications({displayDrawer=true, x}) {
+export default function Notifications({displayDrawer=false, x}) {
   return (
     <div style={{width: '40%'}}>
       <div className="menuItem" style={{textAlign: 'end'}}>
@@ -36,4 +37,9 @@ export default function Notifications({displayDrawer=true, x}) {
       }
     </div>
   )
+}
+
+
+NotificationItem.defaultProps = {
+  displayDrawer: false
 }

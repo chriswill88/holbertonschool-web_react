@@ -8,6 +8,7 @@ import CourseList from '../CourseList/CourseList';
 import PropTypes from 'prop-types';
 
 import { getFullYear, getFooterCopy } from '../utils/utils';
+import propTypes from 'prop-types';
 
 
 function App({ logo, x, isLoggedIn=false }) {
@@ -30,6 +31,10 @@ function App({ logo, x, isLoggedIn=false }) {
       </footer>
     </>
   );
+}
+
+App.defaultProps = {
+  isLoggedIn: false
 }
 
 export default App;
