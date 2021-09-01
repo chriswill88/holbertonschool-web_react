@@ -33,3 +33,11 @@ describe('<Notifications>', () => {
     expect(wrapper.contains('Here is the list of notifications')).toBe(true)
   })
 })
+
+
+describe('<Notifications>', () => {
+  it ('renders app', () => {
+    const wrapper = shallow(<Notifications />)
+    expect(wrapper.contains('Here is the list of notifications')).toBe(true)
+  })
+})

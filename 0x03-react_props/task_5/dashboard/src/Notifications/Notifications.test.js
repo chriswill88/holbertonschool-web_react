@@ -1,4 +1,5 @@
 import React from 'react';
+import {spy} from 'sinon';
 import {expect, jest, test} from '@jest/globals';
 import { shallow, configure} from 'enzyme';
 import Notifications from './Notifications'
@@ -58,6 +59,12 @@ const listNotifications = [
   {id: 3, type: 'urgent', value: null, html: { __html: '<p>hi</p>' }},
 ]
 
+const listNotifications1 = [
+  {id: 1, type: 'default', value: 'New course available', html: null},
+  {id: 2, type: 'urgent', value: 'New course NOT available', html: null},
+  {id: 3, type: 'urgent', value: null, html: { __html: '<p>hi</p>' }},
+]
+
 describe('Notifications runs properly with array', () => {
   it ('renders app', () => {
     const wrapper = shallow(<Notifications listNotifications={listNotifications}/>)
@@ -66,10 +73,19 @@ describe('Notifications runs properly with array', () => {
   })
 })
 
-describe('Notifications give correct message without array', () => {
+describe('Notifications same props', () => {
   it ('renders app', () => {
     const wrapper = shallow(<Notifications listNotifications={listNotifications}/>)
-    expect(wrapper.contains('Here is the list of notifications')).toBe(true)
-    expect(wrapper.contains('No new notification for now')).toBe(false)
+    wrapper.setProps({listNotifications: listNotifications})
+    const shouldUpdate = wrapper.instance().shouldComponentUpdate({ listNotifications: {listNotifications}})
+    expect(shouldUpdate).toBe(true)
+  })
+})
+
+describe('Notifications different props', () => {
+  it ('renders app', () => {
+    const wrapper = shallow(<Notifications listNotifications={listNotifications}/>)
+    const shouldUpdate = wrapper.instance().shouldComponentUpdate({ listNotifications: {listNotifications1}})
+    expect(shouldUpdate).toBe(true)
   })
 })

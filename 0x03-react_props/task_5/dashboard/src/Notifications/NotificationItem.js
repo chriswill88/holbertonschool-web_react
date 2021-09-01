@@ -1,16 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function NotificationItem({type, html, value}) {
-  return (
-    <>
-    {
-      html
-      ? <li data-notification-type={type} dangerouslySetInnerHTML={html} />
-      : <li data-notification-type={type}>{value}</li>
-    }
-    </>
-  );
+
+export default class NotificationItem extends React.PureComponent {
+  render() {
+    const {type, html, value} = this.props;
+
+    return (
+      <>
+      {
+        html
+        ? <li data-notification-type={type} dangerouslySetInnerHTML={html} />
+        : <li data-notification-type={type}>{value}</li>
+      }
+      </>
+    )
+  }
 }
 
 
@@ -25,5 +30,3 @@ NotificationItem.propTypes = {
   type: PropTypes.string.isRequired,
   value: PropTypes.string
 }
-
-export default NotificationItem;
