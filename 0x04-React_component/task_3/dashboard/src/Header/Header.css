@@ -1,0 +1,10 @@
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  color: rgb(255, 0, 64);
+}

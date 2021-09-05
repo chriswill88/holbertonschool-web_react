@@ -1,0 +1,11 @@
+table {
+  border: 1px solid #dbdbdb;
+  width: 100%;
+}
+
+#subs {
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  width: 50%;
+  text-align: start;
+}
