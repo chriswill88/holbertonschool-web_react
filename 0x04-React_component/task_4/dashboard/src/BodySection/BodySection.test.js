@@ -3,6 +3,7 @@ import {expect, jest, test} from '@jest/globals';
 import { shallow, configure, mount} from 'enzyme';
 import BodySection from './BodySection';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import 'jsdom-global/register';
 
 configure({ adapter: new Adapter() });
 
